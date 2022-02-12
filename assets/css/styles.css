@@ -427,6 +427,7 @@ textarea::-webkit-outer-spin-button {
   color: #666;
   border-radius: 2px;
   letter-spacing: -0.3px;
+  margin-left: 1px;
 }
 
 .order-info-area .common-inner .info-main .info-main-tab .tab-switch.is-active {
