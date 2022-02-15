@@ -3,6 +3,7 @@
     top: $header-height;
     margin-top: 10px;
     background-color: #fff;
+    z-index: 10;
     .common-inner{
         border-bottom : 1px solid $booking-color-border144; 
         position: relative;
