@@ -1415,6 +1415,67 @@ textarea::-webkit-outer-spin-button {
   color: #fff;
 }
 
+.menu-review-area .orderer-img-area {
+  padding-bottom: 22px;
+  background-color: #fff;
+}
+
+.menu-review-area .orderer-img-area .common-inner .title {
+  padding: 6px 18px 12px;
+  line-height: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #333;
+}
+
+.menu-review-area .orderer-img-area .common-inner .title .num {
+  margin-left: 6px;
+  color: #01d760;
+}
+
+.menu-review-area .orderer-img-area .common-inner .scroll-x .orderer-img-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-review-area .orderer-img-area .common-inner .scroll-x .orderer-img-list .orderer-img-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-review-area .orderer-img-area .common-inner .scroll-x .orderer-img-list .orderer-img-item + .orderer-img-item {
+  margin-left: 1px;
+}
+
+.menu-review-area .orderer-img-area .common-inner .scroll-x .orderer-img-list .orderer-img-item:first-child::before, .menu-review-area .orderer-img-area .common-inner .scroll-x .orderer-img-list .orderer-img-item:last-child::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 100%;
+}
+
+.menu-review-area .orderer-img-area .common-inner .scroll-x .orderer-img-list .orderer-img-item .orderer-img-link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-review-area .orderer-img-area .common-inner .scroll-x .orderer-img-list .orderer-img-item .orderer-img-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .container {
   padding-top: 94px;
   background-color: #f2f2f2;
