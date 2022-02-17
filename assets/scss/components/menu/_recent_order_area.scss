@@ -26,16 +26,20 @@
             display : flex;
             .recent-menu-item{
                 box-sizing: content-box;
-                padding-left: 16px;
+                padding-right: 16px;
                 width: 80px;
                 text-align: center;
+                position: relative;
                 &.is-ordered{
-                    padding-right: 16px;
+                    padding-left: 16px;
                     border-right: 1px solid $booking-color-bg102;
+                    & + .recent-menu-item{
+                        padding-left: 16px;
+                    }
                 }
-                &:last-child{
-                    padding-right: $m-padding;
-                }
+                // &:last-child{
+                //     padding-right: $m-padding;
+                // }
                 .menu-img-area{
                     position: relative;
                     width: 80px;
@@ -60,32 +64,32 @@
                         height: 100%;
                         border-radius: 100%;
                     }
-                    .badge-cart{
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        padding: 6px;
-                        display : flex;
-                        border : 1px solid $booking-color-border150;
-                        border-radius: 100%;
-                        background-color: $booking-color-bg18;
-                        .ico-cart{
-                            width: 16px;
-                            height: 16px;
-                        }
-                    }
                 }
                 .menu-name{
                     margin-top: 8px;
                     font-weight: 600;
                     font-size: 14px;
-                    @include ellipse;
+                    @include ellipsis;
                 }
                 .menu-price{
                     font-size: 13px;
                     font-weight: 700;
                     color : $point-color;
-                    @include ellipse;
+                    @include ellipsis;
+                }
+                .badge-cart{
+                    position: absolute;
+                    top: 50px;
+                    right: 16px;
+                    padding: 6px;
+                    display : flex;
+                    border : 1px solid $booking-color-border150;
+                    border-radius: 100%;
+                    background-color: $booking-color-bg18;
+                    .ico-cart{
+                        width: 16px;
+                        height: 16px;
+                    }
                 }
             }
         }
