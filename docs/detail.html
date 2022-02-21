@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
-<body class="scroll-off">
+<body>
     <div class="container">
 
 
@@ -99,7 +99,7 @@
                                 <button class="btn-plus" aria-label="더하기"></button>
                             </div>
                         </div>
-                        <button class="btn-order">1개 담기 7,800원</button>
+                        <button class="btn-order" onclick="popupOpen()">1개 담기 7,800원</button>
                     </div>
                 </div>
             </div>
@@ -289,7 +289,7 @@
                                 <button class="btn-plus" aria-label="더하기"></button>
                             </div>
                         </div>
-                        <button class="btn-close">
+                        <button class="btn-close" onclick="popupClose()">
                             <img src="../assets/images/ico-close.svg" alt="닫기" class="ico-close">
                         </button>
                     </div>
@@ -421,6 +421,16 @@
 
     </div>
 
+    <script>
+        const popupOpen = () => {
+            document.querySelector('body').classList.add('scroll-off');
+            document.querySelector('.option-popup-area').classList.add('show');
+        }
+        const popupClose = () => {
+            document.querySelector('body').classList.remove('scroll-off');
+            document.querySelector('.option-popup-area').classList.remove('show');
+        }
+    </script>
 </body>
 
 </html>

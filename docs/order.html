@@ -162,7 +162,7 @@
                     <div class="agreement-area">
                         <p class="title">개인정보 수집 제공</p>
                         <ul class="agreement-list">
-                            <li class="agreement-item is-open">
+                            <li class="agreement-item">
                                 <div class="agreement-title">
                                     <span class="txt">개인정보 수집 동의</span>
                                     <button class="btn-toggle">
@@ -239,7 +239,7 @@
 
             <!-- ORDER BTN -->
             <div class="btn-order-area">
-                <button class="btn-order">
+                <button class="btn-order" onclick="modalOpen()">
                     <svg viewBox="0 0 18 18" class="ico-n-logo">
                         <path fill-rule="evenodd" fill="currentColor"
                             d="M18 0v18H0V0h18zM7.255 4.582H4.473v9.054h2.915V8.79l3.357 4.846h2.782V4.582h-2.915v4.846L7.255 4.582z">
@@ -263,7 +263,7 @@
             <div class="dimmed-layer light"></div>
             <div class="modal-container">
                 <div class="modal-content">
-                    <button class="btn-close">
+                    <button class="btn-close" onclick="modalClose()">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="1" y="11.6066" width="15" height="1" transform="rotate(-45 1 11.6066)"
                                 fill="black" />
@@ -289,6 +289,24 @@
         </div>
         <!-- //MODAL -->
     </div>
+
+    <script>
+        const btnToggle = document.querySelectorAll('.btn-toggle');
+        const toggleMenuList = (e) => {
+            e.currentTarget.closest('.agreement-item').classList.toggle('is-open');
+        }
+        btnToggle.forEach(function (e) {
+            e.addEventListener('click', toggleMenuList);
+        })
+        const modalOpen = () => {
+            document.querySelector('body').classList.add('scroll-off');
+            document.querySelector('.modal-wrapper').classList.remove('hidden');
+        }
+        const modalClose = () => {
+            document.querySelector('body').classList.remove('scroll-off');
+            document.querySelector('.modal-wrapper').classList.add('hidden');
+        }
+    </script>
 </body>
 
 </html>

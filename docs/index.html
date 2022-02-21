@@ -400,7 +400,7 @@
     <div class="local-order-popup hidden">
         <p class="title">어디서 드시나요?</p>
         <div class="type-list">
-            <a href="#" class="type-item">
+            <a href="#" class="type-item" onclick="popupClose()">
                 <!-- <img src="" alt="포장" class="icon"> -->
                 <svg class="icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 463 463"
@@ -532,6 +532,29 @@
             </a>
         </div>
     </div>
+
+    <script>
+        window.onload = function () {
+            popupOpen();
+        }
+        const popupOpen = () => {
+            document.querySelector('.dimmed-layer').classList.remove('hidden');
+            document.querySelector('.local-order-popup').classList.remove('hidden');
+            document.querySelector('body').classList.add('scroll-off');
+        }
+        const popupClose = () => {
+            document.querySelector('.dimmed-layer').classList.add('hidden');
+            document.querySelector('.local-order-popup').classList.add('hidden');
+            document.querySelector('body').classList.remove('scroll-off');
+        }
+        const btnToggle = document.querySelectorAll('.btn-toggle');
+        const toggleMenuList = (e) => {
+            e.currentTarget.closest('.menu-list-area').classList.toggle('is-closed');
+        }
+        btnToggle.forEach(function (e) {
+            e.addEventListener('click', toggleMenuList);
+        })
+    </script>
 </body>
 
 </html>
