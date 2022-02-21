@@ -21,6 +21,7 @@
             height: 1px;
             background-color: currentColor;
         }
+        &.disabled,
         &:disabled{
             color : $booking-color-text102;
         }
